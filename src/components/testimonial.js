@@ -25,7 +25,7 @@ function ImgMediaCard(props) {
             component="img"
             alt="{name}"
             className={classes.media}
-            height="140"
+            height="150"
             image={image}
             title={title}
           />
