@@ -4,12 +4,12 @@ import "firebase/database";
 import "firebase/storage";
 
 var config = {
-  apiKey: "AIzaSyD-Ey8WscLT3l_a4BBFnEb5VOvBRzJgj6c",
-  authDomain: "react-slack-clone-ef537.firebaseapp.com",
-  databaseURL: "https://react-slack-clone-ef537.firebaseio.com",
-  projectId: "react-slack-clone-ef537",
-  storageBucket: "react-slack-clone-ef537.appspot.com",
-  messagingSenderId: "159137816814"
+  apiKey: "AIzaSyDa3W7kW0lY-4OccLLWCh7aACTDZZYFN5Y",
+  authDomain: "office-plus-website.firebaseapp.com",
+  databaseURL: "https://office-plus-website.firebaseio.com",
+  projectId: "office-plus-website",
+  storageBucket: "office-plus-website.appspot.com",
+  messagingSenderId: "775493716753"
 };
 
 firebase.initializeApp(config);
