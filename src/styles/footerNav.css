@@ -1,0 +1,11 @@
+.footerRow ul {
+  padding: 0 !important;
+}
+
+.footerRow ul li {
+  padding: 5px 0 !important;
+}
+
+.footerRow .footerIcon {
+  width: 20px;
+}

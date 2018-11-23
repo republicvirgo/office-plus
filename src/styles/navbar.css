@@ -1,0 +1,43 @@
+.NavBrand {
+  color: #e91e63;
+}
+
+.NavbarUl a:before,
+.NavbarUl a:after {
+  height: 2px;
+  position: absolute;
+  content: "";
+  -webkit-transition: all 0.5s ease;
+  transition: all 0.35s ease;
+  background-color: #e91e63;
+  width: 0;
+}
+
+.NavbarUl a:before {
+  top: 0;
+  left: 0;
+}
+
+.NavbarUl a:after {
+  bottom: 0;
+  right: 0;
+}
+
+.NavbarUl .nav-item.active .nav-link {
+  background-color: rgba(255, 255, 255, 0) !important;
+}
+
+.NavbarUl .nav-item .nav-link {
+  color: rgba(0, 0, 0, 1) !important;
+}
+
+.NavbarUl .nav-item .nav-link:hover {
+  color: rgba(233, 30, 99, 1) !important;
+}
+
+.NavbarUl a:hover:before,
+.NavbarUl .current a:before,
+.NavbarUl a:hover:after,
+.NavbarUl .active a:after {
+  width: 100%;
+}
