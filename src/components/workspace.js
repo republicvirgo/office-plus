@@ -3,9 +3,7 @@ import PropTypes from "prop-types";
 
 import { withStyles } from "@material-ui/core/styles";
 
-import ProductBanner from "./productBanner";
-import ProfileBanner from "./profileBanner";
-import Testimonial from "./testimonial";
+import ProductList from "./productList";
 
 const styles = theme => ({
   root: {
@@ -16,24 +14,20 @@ const styles = theme => ({
   }
 });
 
-class Home extends React.Component {
+class Workspace extends React.Component {
   render() {
     const { classes } = this.props;
 
     return (
       <div className={classes.root}>
-        <ProfileBanner />
-
-        <ProductBanner />
-
-        <Testimonial />
+        <ProductList />
       </div>
     );
   }
 }
 
-Home.propTypes = {
+Workspace.propTypes = {
   classes: PropTypes.object.isRequired
 };
 
-export default withStyles(styles)(Home);
+export default withStyles(styles)(Workspace);

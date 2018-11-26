@@ -14,6 +14,8 @@ import foto2 from "../assets/images/testimonial/foto2.png";
 import foto3 from "../assets/images/testimonial/foto3.png";
 import foto4 from "../assets/images/testimonial/foto4.png";
 
+import "../styles/productList.css";
+
 const styles = {
   media: {
     objectFit: "cover"
@@ -30,7 +32,7 @@ const testimoniData = [
     name: "Ramon Ray",
     title: "Entrepreneur & Global Speaker",
     text:
-      "My favorite thing about WeWork is the easy access to facilities and network of peers (online and at each location) who I can help or get help from!"
+      "It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English."
   },
   {
     id: 2,
@@ -67,8 +69,8 @@ function ImgMediaCard(props) {
         container
         spacing={8}
         direction="row"
-        alignItems="center"
         justify="center"
+        alignItems="flex-start"
       >
         {testimoniData.map(td => (
           <Grid item md={3}>
@@ -88,7 +90,8 @@ function ImgMediaCard(props) {
                   <hr />
                   <Typography
                     component="p"
-                    style={{ fontStyle: "italic", minHeight: 200 }}
+                    style={{ fontStyle: "italic" }}
+                    className={classes.section}
                   >
                     "{td.text}"
                   </Typography>
