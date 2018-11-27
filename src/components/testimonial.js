@@ -8,11 +8,9 @@ import CardMedia from "@material-ui/core/CardMedia";
 import Typography from "@material-ui/core/Typography";
 import Grid from "@material-ui/core/Grid";
 import Grow from "@material-ui/core/Grow";
+import Paper from "@material-ui/core/Paper";
 
-import foto1 from "../assets/images/testimonial/foto1.png";
-import foto2 from "../assets/images/testimonial/foto2.png";
-import foto3 from "../assets/images/testimonial/foto3.png";
-import foto4 from "../assets/images/testimonial/foto4.png";
+import { testimonialData } from "../alldata";
 
 const styles = {
   media: {
@@ -23,87 +21,69 @@ const styles = {
   }
 };
 
-const testimoniData = [
-  {
-    id: 1,
-    img: foto1,
-    name: "Ramon Ray",
-    title: "Entrepreneur & Global Speaker",
-    text:
-      "My favorite thing about WeWork is the easy access to facilities and network of peers (online and at each location) who I can help or get help from!"
-  },
-  {
-    id: 2,
-    img: foto2,
-    name: "Saeed Jabbar",
-    title: "Founder of Inclusion",
-    text:
-      "I've scaled my organization, hosted successful events, and most importantly met lifelong friends all within the WeWork ecosystem."
-  },
-  {
-    id: 3,
-    img: foto3,
-    name: "Fabricio González Antuña",
-    title: "CEO of Dynamia",
-    text:
-      "The most important thing is that all of the community has embedded a standard of trust. You breathe trust, and for developing business, it's a great plus!"
-  },
-  {
-    id: 4,
-    img: foto4,
-    name: "Entrepreneur & Creative Director",
-    title: "Founder of Inclusion",
-    text:
-      "There's something empowering about working in a space where you are encouraged to create brilliant ideas that disrupt culture followed by the support of a team of people who want you to win."
-  }
-];
-
-function ImgMediaCard(props) {
+function Testimoni(props) {
   const { classes } = props;
 
   return (
-    <Grow in="true" {...{ timeout: 3000 }}>
-      <Grid
-        container
-        spacing={8}
-        direction="row"
-        alignItems="center"
-        justify="center"
-      >
-        {testimoniData.map(td => (
-          <Grid item md={3}>
-            <Card className={classes.card} key={td.key}>
-              <CardActionArea>
-                <CardMedia
-                  component="img"
-                  alt="{name}"
-                  className={classes.media}
-                  height="150"
-                  image={td.img}
-                  title={td.title}
-                />
-                <CardContent>
-                  <Typography component="p">{td.name}</Typography>
-                  <Typography component="p">{td.title}</Typography>
-                  <hr />
-                  <Typography
-                    component="p"
-                    style={{ fontStyle: "italic", minHeight: 200 }}
-                  >
-                    "{td.text}"
-                  </Typography>
-                </CardContent>
-              </CardActionArea>
-            </Card>
-          </Grid>
-        ))}
-      </Grid>
-    </Grow>
+    <div className="my-5">
+      <Grow in="true" {...{ timeout: 3000 }}>
+        <Paper
+          className={classes.root}
+          square={false}
+          elevation={0}
+          align="left"
+          style={{ marginBottom: "20px" }}
+        >
+          <Typography variant="h5" component="h3">
+            Community Insights
+          </Typography>
+          <Typography component="p">Our members tell it like it is.</Typography>
+        </Paper>
+      </Grow>
+
+      <Grow in="true" {...{ timeout: 3000 }}>
+        <Grid
+          container
+          spacing={8}
+          direction="row"
+          alignItems="center"
+          justify="center"
+        >
+          {testimonialData.map(td => (
+            <Grid item md={3}>
+              <Card className={classes.card} key={td.id}>
+                <CardActionArea>
+                  <CardMedia
+                    component="img"
+                    alt="{name}"
+                    className={classes.media}
+                    height="150"
+                    image={td.img}
+                    title={td.title}
+                  />
+                  <CardContent>
+                    <Typography component="p">{td.name}</Typography>
+                    <Typography component="p">{td.title}</Typography>
+                    <hr />
+                    <Typography
+                      component="p"
+                      style={{ fontStyle: "italic", minHeight: "15vh" }}
+                    >
+                      "{td.text}"
+                    </Typography>
+                  </CardContent>
+                </CardActionArea>
+              </Card>
+            </Grid>
+          ))}
+        </Grid>
+      </Grow>
+    </div>
   );
 }
 
-ImgMediaCard.propTypes = {
+Testimoni.propTypes = {
   classes: PropTypes.object.isRequired
 };
 
-export default withStyles(styles)(ImgMediaCard);
+export default withStyles(styles)(Testimoni);

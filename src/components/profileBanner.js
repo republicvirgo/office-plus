@@ -10,39 +10,7 @@ import GridListTile from "@material-ui/core/GridListTile";
 import Grid from "@material-ui/core/Grid";
 import Grow from "@material-ui/core/Grow";
 
-import image1 from "../assets/images/breakfast.jpg";
-import image2 from "../assets/images/burgers.jpg";
-import image3 from "../assets/images/camera.jpg";
-import image4 from "../assets/images/hats.jpg";
-import image5 from "../assets/images/morning.jpg";
-import image6 from "../assets/images/vegetables.jpg";
-
-const tileData = [
-  {
-    img: image1,
-    big: false
-  },
-  {
-    img: image2,
-    big: false
-  },
-  {
-    img: image3,
-    big: true
-  },
-  {
-    img: image4,
-    big: false
-  },
-  {
-    img: image5,
-    big: false
-  },
-  {
-    img: image6,
-    big: true
-  }
-];
+import { profileBannerData } from "../alldata";
 
 const styles = theme => ({
   root: {
@@ -79,13 +47,13 @@ class Home extends React.Component {
                   spacing={0}
                   className={classes.gridList}
                 >
-                  {tileData.map(tile => (
+                  {profileBannerData.map(pb => (
                     <GridListTile
-                      key={tile.img}
-                      cols={tile.big ? 2 : 1}
-                      rows={tile.big ? 2 : 1}
+                      key={pb.img}
+                      cols={pb.big ? 2 : 1}
+                      rows={pb.big ? 2 : 1}
                     >
-                      <img src={tile.img} alt={tile.title} />
+                      <img src={pb.img} alt={pb.title} />
                     </GridListTile>
                   ))}
                 </GridList>

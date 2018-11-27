@@ -1,4 +1,4 @@
-import React from "react";
+import React, { Component } from "react";
 import PropTypes from "prop-types";
 import { loadCSS } from "fg-loadcss/src/loadCSS";
 import classNames from "classnames";
@@ -42,7 +42,7 @@ const styles = theme => ({
   }
 });
 
-class Percobaan extends React.Component {
+class Percobaan extends Component {
   state = {
     direction: "row", //row, row-reverse, column, column-reverse
     justify: "space-evenly", //flex-start, center, flex-end, space-between, space-around, space-evenly

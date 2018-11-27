@@ -1,21 +1,30 @@
-import React from "react";
-import { loadCSS } from "fg-loadcss/src/loadCSS";
+import React, { Component } from "react";
+
+import "bootstrap-css-only/css/bootstrap.min.css";
+import "mdbreact/dist/css/mdb.css";
 
 import { Col, Container, Row, Footer } from "mdbreact";
 
 import { BrowserRouter as Router } from "react-router-dom";
 import { Link } from "react-router-dom";
 
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import {
+  faMapMarkerAlt,
+  faPhoneVolume,
+  faMobileAlt,
+  faCaretRight
+} from "@fortawesome/free-solid-svg-icons";
+import { faBuilding, faEnvelope } from "@fortawesome/free-regular-svg-icons";
+import {
+  faFacebookSquare,
+  faInstagram,
+  faYoutube
+} from "@fortawesome/free-brands-svg-icons";
+
 import "../styles/footerNav.css";
 
-class FooterNav extends React.Component {
-  componentDidMount() {
-    loadCSS(
-      "https://use.fontawesome.com/releases/v5.5.0/css/all.css",
-      document.querySelector("#insertion-point-jss")
-    );
-  }
-
+class FooterNav extends Component {
   render() {
     return (
       <Router>
@@ -27,23 +36,38 @@ class FooterNav extends React.Component {
                   <h5 className="title">Officeplus Pte Ltd</h5>
                   <ul>
                     <li className="list-unstyled">
-                      <i className="far fa-building footerIcon" /> Podomoro City
-                      Ruko GSA B / 8DH
+                      <FontAwesomeIcon
+                        icon={faBuilding}
+                        className="footerIcon"
+                      />{" "}
+                      Podomoro City Ruko GSA B / 8DH
                     </li>
                     <li className="list-unstyled">
-                      <i className="fas fa-map-marker-alt footerIcon" /> Jl.
-                      S.Parman - Jakarta Barat
+                      <FontAwesomeIcon
+                        icon={faMapMarkerAlt}
+                        className="footerIcon"
+                      />{" "}
+                      Jl. S.Parman - Jakarta Barat
                     </li>
                     <li className="list-unstyled">
-                      <i className="fas fa-phone-volume footerIcon" /> 021 2920
-                      6264
+                      <FontAwesomeIcon
+                        icon={faPhoneVolume}
+                        className="footerIcon"
+                      />{" "}
+                      021 2920 6264
                     </li>
                     <li className="list-unstyled">
-                      <i className="fas fa-mobile-alt footerIcon" /> 0812 9072
-                      3828
+                      <FontAwesomeIcon
+                        icon={faMobileAlt}
+                        className="footerIcon"
+                      />{" "}
+                      0812 9072 3828
                     </li>
                     <li className="list-unstyled">
-                      <i className="far fa-envelope footerIcon" />{" "}
+                      <FontAwesomeIcon
+                        icon={faEnvelope}
+                        className="footerIcon"
+                      />{" "}
                       sales@officepluscenter.com
                     </li>
                   </ul>
@@ -53,23 +77,38 @@ class FooterNav extends React.Component {
                   <h5 className="title">Links</h5>
                   <ul>
                     <li className="list-unstyled">
-                      <i className="fas fa-caret-right footerIcon" />{" "}
+                      <FontAwesomeIcon
+                        icon={faCaretRight}
+                        className="footerIcon"
+                      />{" "}
                       <Link to="/workspace">Workspace</Link>
                     </li>
                     <li className="list-unstyled">
-                      <i className="fas fa-caret-right footerIcon" />{" "}
+                      <FontAwesomeIcon
+                        icon={faCaretRight}
+                        className="footerIcon"
+                      />{" "}
                       <Link to="/location">Location</Link>
                     </li>
                     <li className="list-unstyled">
-                      <i className="fas fa-caret-right footerIcon" />{" "}
+                      <FontAwesomeIcon
+                        icon={faCaretRight}
+                        className="footerIcon"
+                      />{" "}
                       <Link to="/our-profile">Our Profile</Link>
                     </li>
                     <li className="list-unstyled">
-                      <i className="fas fa-caret-right footerIcon" />{" "}
+                      <FontAwesomeIcon
+                        icon={faCaretRight}
+                        className="footerIcon"
+                      />{" "}
                       <Link to="/contact-us">Contact Us</Link>
                     </li>
                     <li className="list-unstyled">
-                      <i className="fas fa-caret-right footerIcon" />{" "}
+                      <FontAwesomeIcon
+                        icon={faCaretRight}
+                        className="footerIcon"
+                      />{" "}
                       <Link to="/blogs">Blogs</Link>
                     </li>
                   </ul>
@@ -79,7 +118,10 @@ class FooterNav extends React.Component {
                   <h5 className="title">Connect with Us</h5>
                   <ul>
                     <li className="list-unstyled">
-                      <i className="fab fa-facebook-square footerIcon" />{" "}
+                      <FontAwesomeIcon
+                        icon={faFacebookSquare}
+                        className="footerIcon"
+                      />{" "}
                       <a
                         target="_blank"
                         rel="noopener noreferrer"
@@ -89,7 +131,10 @@ class FooterNav extends React.Component {
                       </a>
                     </li>
                     <li className="list-unstyled">
-                      <i className="fab fa-instagram footerIcon" />{" "}
+                      <FontAwesomeIcon
+                        icon={faInstagram}
+                        className="footerIcon"
+                      />{" "}
                       <a
                         target="_blank"
                         rel="noopener noreferrer"
@@ -99,7 +144,10 @@ class FooterNav extends React.Component {
                       </a>
                     </li>
                     <li className="list-unstyled">
-                      <i className="fab fa-youtube footerIcon" />{" "}
+                      <FontAwesomeIcon
+                        icon={faYoutube}
+                        className="footerIcon"
+                      />{" "}
                       <a
                         target="_blank"
                         rel="noopener noreferrer"

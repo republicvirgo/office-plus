@@ -1,4 +1,4 @@
-import React from "react";
+import React, { Component } from "react";
 import PropTypes from "prop-types";
 
 import { withStyles } from "@material-ui/core/styles";
@@ -16,7 +16,7 @@ const styles = theme => ({
   }
 });
 
-class Home extends React.Component {
+class Home extends Component {
   render() {
     const { classes } = this.props;
 

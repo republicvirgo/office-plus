@@ -2,9 +2,18 @@ import React from "react";
 import ReactDOM from "react-dom";
 import { BrowserRouter as Router } from "react-router-dom";
 
-import "font-awesome/css/font-awesome.min.css";
-import "bootstrap-css-only/css/bootstrap.min.css";
-import "mdbreact/dist/css/mdb.css";
+//import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+//import { faCaretRight } from "@fortawesome/free-solid-svg-icons";
+//import { faEnvelope } from "@fortawesome/free-regular-svg-icons";
+//import { faYoutube } from "@fortawesome/free-brands-svg-icons";
+
+//import { loadCSS } from "fg-loadcss/src/loadCSS";
+/*componentDidMount() {
+loadCSS(
+    "https://use.fontawesome.com/releases/v5.5.0/css/all.css",
+    document.querySelector("#insertion-point-jss")
+);
+}*/
 
 import "./styles/index.css";
 import App from "./App";

@@ -1,9 +1,10 @@
-import React from "react";
+import React, { Component } from "react";
 import PropTypes from "prop-types";
 
 import { withStyles } from "@material-ui/core/styles";
 
 import ProductList from "./productList";
+import Testimonial from "./testimonial";
 
 const styles = theme => ({
   root: {
@@ -14,13 +15,14 @@ const styles = theme => ({
   }
 });
 
-class Workspace extends React.Component {
+class Workspace extends Component {
   render() {
     const { classes } = this.props;
 
     return (
       <div className={classes.root}>
         <ProductList />
+        <Testimonial />
       </div>
     );
   }

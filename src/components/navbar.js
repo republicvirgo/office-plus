@@ -1,4 +1,9 @@
-import React from "react";
+import React, { Component } from "react";
+
+import "bootstrap-css-only/css/bootstrap.min.css";
+
+import "mdbreact/dist/css/mdb.css";
+
 import {
   Navbar,
   NavbarBrand,
@@ -8,13 +13,11 @@ import {
   NavItem,
   NavLink,
   Container
-  //View,
-  //Mask
 } from "mdbreact";
 
 import "../styles/navbar.css";
 
-class NavBar extends React.Component {
+class NavBar extends Component {
   constructor(props) {
     super(props);
     this.state = {
